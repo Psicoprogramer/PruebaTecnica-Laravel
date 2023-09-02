@@ -1,0 +1,222 @@
+@import 'styles.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* *{
+    margin: 0;
+    border: 0;
+    font-family: monospace;
+} */
+body{
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    min-height: 100vh; /* Establece la altura mínima del body al 100% del viewport height */
+    display: flex; /* Usa flexbox para alinear el contenido verticalmente */
+    flex-direction: column; /* Alinea el contenido en una columna */
+    margin: 0; 
+}
+.title-products{
+    text-align: center;
+    margin: 20px;
+}
+.main-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.container-products{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12)
+     0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px,
+      rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    text-align: center;
+    min-height: 350px; /* Establece una altura mínima de 400px */
+    height: auto;
+    justify-content: space-evenly;
+    border-radius: 16px;
+    
+}
+@media (max-width: 430px) {
+    .container-products {
+        width: 300px;
+    }
+}
+.product-title{
+    margin: 16px;
+    border-bottom: 1px solid #c57885;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* clases de formulario de creacion */
+.form-created{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-avalible{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 84px;
+    gap: 20px;
+}
+.button-default{
+    padding: 6px 12px;
+    border-radius: 8px;
+    background-color: rgb(14, 111, 114);
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.button-default:hover{
+    background-color: rgb(6, 57, 58);
+} 
+.button-default a{
+    text-decoration: none;
+    color: white;
+}
+.text-area{
+    height: 80px;
+}
+/* estilo boton delete */
+.button-delet {
+    background-color: initial;
+    background-image: linear-gradient(-180deg, #FF7E31, #E62C03);
+    border-radius: 6px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0 2px 4px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Inter,-apple-system,system-ui,Roboto,"Helvetica Neue",Arial,sans-serif;
+    height: 40px;
+    line-height: 40px;
+    outline: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    pointer-events: auto;
+    position: relative;
+    text-align: center;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: top;
+    white-space: nowrap;
+    width: 100px;
+    z-index: 9;
+    border: 0;
+    transition: box-shadow .2s;
+  }
+  .button-delet:hover{
+    box-shadow: rgba(253, 76, 0, 0.5) 0 3px 8px;
+    cursor: pointer;
+  }
+.container-buttoms{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+/* nav -> se encuentra en el layout principal */
+.container-nav{
+    display: flex;
+    align-items: center;
+    width: 300px;
+}
+.nav-a{
+    text-decoration: none;
+    margin-right: 16px;
+    color: black;
+    border-bottom: 1px solid pink;
+}
+/* stylos del footer */
+.footer-container {
+    grid-area: footer;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem; /* text-sm */
+    line-height: 1.75; /* leading-[1.75] */
+    margin-top: 1rem; /* mt-4 */
+  }
+  .footer-span{
+    color: #E62C03;
+  }
+
+  .gradient-link {
+    position: relative;
+    box-decoration-break: clone;
+    text-decoration: none;
+  }
+
+  .gradient-link:hover:after {
+    transform: translateZ(0) scale(1);
+  }
+
+  .gradient-link:after {
+    left: 0;
+    right: 0;
+    bottom: -2px;
+    content: "";
+    height: 2px;
+    position: absolute;
+    transform: translateZ(0) scaleX(0);
+    transform-origin: left center;
+    transition: all 0.15s ease-in-out;
+  }
+  .container-inputs{
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+.container-boton_form{
+    margin-left: 16px;
+}
+ .container-form_empleados{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 100px;
+} 
+.empleados_imagen{
+    width: 100px;
+    border-radius: 20px;
+    box-shadow: 1px 4px 1px #210d0d;
+}
+.container-empleados_imagen{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.list-empleado{
+    list-style: none;
+}
+@media screen and (max-width: 500px) {
+    .container-empleados_imagen {
+        /* Cambia el comportamiento para tamaños de pantalla menores a 500px */
+        flex-direction: column; /* Coloca los elementos uno debajo del otro */
+        align-items: center;
+        gap: 6px;
+
+    }
+}
+.container-empleados{
+    padding: 16px;
+    background-color: rgba(255, 0, 0, 0.2);
+    margin: 8px;
+    border-radius: 15px;
+   
+}
